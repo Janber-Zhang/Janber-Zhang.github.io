@@ -1,0 +1,214 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*头部-主页*/
+#home_Header{
+	height: 45px;
+	background-color: #086ED5;
+}
+
+#head_wrap{
+	height: 45px;
+	width: 960px;
+	margin: 0 auto;
+}
+/*逼呼*/
+#home_Header_logo{
+	float: left;
+	font-size: 30px;
+	text-decoration: none;
+	color: white;
+	line-height: 45px;
+}
+
+/*搜索栏*/
+#search_bh{
+	margin-left: 10px;	
+	width: 250px;
+	height: 35px;
+	float: left;
+	margin-top: 5px;
+}
+#search_bh_contant{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 28px;
+	color: grey;
+	width: 190px;
+	float: left;
+}
+#search_bh button{
+	height: 32px;
+	width: 48px;
+	border: none;
+}
+/*导航栏*/
+#top_dh{
+	float: left;
+	width: 330px;
+	height: 45px;
+	margin-left: 10px;
+}
+.top_dh_{
+	float: left;
+	display: block;
+	width: 50px;
+	text-align: center;
+}
+#top_dh_1{
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	display: block;
+	line-height: 45px;
+	background-color: #095fb3;
+}
+#top_dh_2{
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	display: block;
+	line-height: 45px;
+}
+#top_dh_3{
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	display: block;
+	line-height: 45px;
+}
+#top_dh_4{
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	display: block;
+	line-height: 45px;
+}
+#top_dh_5{
+	font-size: 20px;
+	text-decoration: none;
+	color: white;
+	display: block;
+	line-height: 45px;
+}
+
+/*提问*/
+#Question{
+	float: left;
+	margin-left: 50px;
+	width: 50px;
+	margin-top: 7px;
+}
+#Question_a{
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+/*个人中心*/
+#personal{
+	width: 160px;
+	float: left;
+	position: relative;
+	color: white;
+}
+#personal_id{
+	text-decoration: none;
+	font-size: 20px;
+	display: block;
+	line-height: 45px;
+	color: white;
+	text-indent: 46px;	
+}
+#personal_id img{
+	position: absolute;
+	top: 9px;
+	left: 10px;
+}
+
+#personal_list{
+	position: absolute;
+	top: 45px;
+	z-index: 1;
+	display: none;
+}
+#personal_list li{
+	list-style-type: none;
+	line-height: 40px;
+	display: block;
+	width: 160px;
+	background-color: #095fb3;
+}
+
+.personal_list_c a{
+	text-decoration: none;
+	color: white;
+}
+
+/*主体部分*/
+#mainbody{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 40px;
+}
+
+/*最新动态*/
+#_left{
+	width: 560px;
+	float: left;
+}
+#_left_top{
+	height: 45px;
+	color: grey;
+	font-size: 14px;
+	line-height: 45px;
+	border-bottom: 1px solid grey;
+}
+#zzdt{
+	font-weight: bold;
+}
+#setting{
+	text-decoration: none;
+	color: grey;
+	float: right;
+}
+
+.cell{
+	margin-top: 10px;
+	margin-bottom: 40px;
+	padding-bottom: 5px;
+	margin-left: 100px;
+	position: relative;
+	font-size: 17px;
+	color: #353333;
+}
+.user_id{
+	font-size: 14px;
+	font-family: Georgia;
+	position: absolute;
+	color: grey;
+	left: -100px;
+}
+.cell_img{
+	display: block;
+	margin: 0 auto;
+}
+
+/*广告*/
+#_right{
+	width: 260px;
+	float: right;
+	background-color: yellow;
+}
+
+/*清除浮动*/
+#clearF{
+	clear: both;
+}
+/*版权部分*/
+#footer{
+	margin-top: 40px;
+	text-align: center;
+}
