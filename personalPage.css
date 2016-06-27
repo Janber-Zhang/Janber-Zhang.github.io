@@ -1,0 +1,52 @@
+body, div, p{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: rgba(31, 29, 129, 0.72);
+	color: white;
+	font-family: LatoWeb,Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size: 25px;
+}
+
+
+#wrap{
+	width: 40%;
+	margin: 0 auto;
+}
+/*个人信息*/
+#personal_Inf{
+	width: 100%;
+}
+#personal_Inf img{
+	width: 20%;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	margin:20% 35%;
+	transition: width 2s, transform 2s;
+	-webkit-transition: width 2s, transform 2s; /* Safari and Chrome */
+	-moz-transition: width 2s, transform 2s; /* Firefox 4 */
+	-o-transition: width 2s, transform 2s; /* Opera */
+}
+#personal_Inf img:hover{
+	width: 40%;
+	transform: rotateY(360deg);
+}
+
+/*其他*/
+
+#more_Inf img{
+	width: 20%;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	transition: width 2s, transform 2s;
+	-webkit-transition: width 2s, transform 2s; /* Safari and Chrome */
+	-moz-transition: width 2s, transform 2s; /* Firefox 4 */
+	-o-transition: width 2s, transform 2s; /* Opera */
+}
+
+#more_Inf img:hover{
+	width: 30%;
+	transform: rotate(360deg);
+}
