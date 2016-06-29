@@ -29,23 +29,47 @@ body{
 	width: 100%;
 	margin-bottom: 10%;
 }
-#personal_Inf img{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 15%;
-	width: 15%;
-	border: 3px solid hsla(0, 0%, 100%, .8);
-	border-radius: 50%;
-	transition: width 1.5s, transform 1.5s;
-	-webkit-transition: width 1.5s, transform 1.5s; /* Safari and Chrome */
-	-moz-transition: width 1.5s, transform 1.5s; /* Firefox 4 */
-	-o-transition: width 1.5s, transform 1.5s; /* Opera */
+@media screen and (min-device-width:600px){
+	#personal_Inf img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15%;
+		width: 15%;
+		border: 3px solid hsla(0, 0%, 100%, .8);
+		border-radius: 50%;
+		transition: width 1.5s, transform 1.5s;
+		-webkit-transition: width 1.5s, transform 1.5s; /* Safari and Chrome */
+		-moz-transition: width 1.5s, transform 1.5s; /* Firefox 4 */
+		-o-transition: width 1.5s, transform 1.5s; /* Opera */
+	}
+	#personal_Inf img:hover{
+		width: 23%;
+		transform: rotateY(360deg);
+	}
 }
-#personal_Inf img:hover{
-	width: 23%;
-	transform: rotateY(360deg);
+
+@media screen and (max-device-width:600px){
+	#personal_Inf img{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15%;
+		width: 30%;
+		border: 3px solid hsla(0, 0%, 100%, .8);
+		border-radius: 50%;
+		transition: width 1.5s, transform 1.5s;
+		-webkit-transition: width 1.5s, transform 1.5s; /* Safari and Chrome */
+		-moz-transition: width 1.5s, transform 1.5s; /* Firefox 4 */
+		-o-transition: width 1.5s, transform 1.5s; /* Opera */
+	}
+	#personal_Inf img:hover{
+		width: 35%;
+		transform: rotateY(360deg);
+	}
 }
+	
+	
 
 #personal_Inf_a{
 	margin-top: 40px;
@@ -61,10 +85,20 @@ body{
 	
 }
 
-.more_Inf_c{
-	display: inline-block;
-	width: 24%;
-	position: relative;
+@media screen and (min-device-width:600px){
+	.more_Inf_c{
+		display: inline-block;
+		width: 24%;
+		position: relative;
+	}
+}
+
+@media screen and (max-device-width:600px){
+	.more_Inf_c{
+		width: 50%;
+		position: relative;
+		margin: 0 auto;
+	}
 }
 
 #more_Inf img{
@@ -79,18 +113,30 @@ body{
 	-moz-transition: width 1s, transform 1s; /* Firefox 4 */
 	-o-transition: width 1s, transform 1s; /* Opera */
 }
+#more_Inf img:hover{
+	width: 50%;
+	transform: rotate(360deg);
+}
 /*my repo*/
-#repo_more ul{
-	position: absolute;
-	top: 100%;
-	padding: 0;
-	width: 100%;
+@media screen and (min-device-width:600px){
+	.repo_more ul{
+		position: absolute;
+		top: 100%;
+		padding: 0;
+		width: 100%;
+	}
+}
+@media screen and (max-device-width:600px){
+	.repo_more ul{
+		padding: 0;
+		width: 100%;
+	}
 }
 
-#repo_list{
+#repo_list1, #repo_list2, #repo_list3, #repo_list4{
 	display: none;
 }
-#repo_more ul li{
+.repo_more ul li{
 	display: block;
 	width: 100%;
 	text-align: center;
@@ -101,7 +147,3 @@ body{
 }
 
 
-#more_Inf img:hover{
-	width: 50%;
-	transform: rotate(360deg);
-}
