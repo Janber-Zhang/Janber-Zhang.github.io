@@ -113,10 +113,10 @@ body{
 	-moz-transition: width 1s, transform 1s; /* Firefox 4 */
 	-o-transition: width 1s, transform 1s; /* Opera */
 }
-#more_Inf img:hover{
+/*#more_Inf img:hover{
 	width: 50%;
 	transform: rotate(360deg);
-}
+}*/
 /*my repo*/
 @media screen and (min-device-width:600px){
 	.repo_more ul{
