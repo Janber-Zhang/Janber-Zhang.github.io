@@ -1,0 +1,128 @@
+body, div, p, img, a, ul{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+a{
+	color: white;
+	text-decoration: none;
+}
+
+li{
+	font-size: 20px;
+	list-style-type: none;
+}
+body{
+	background: rgba(31, 29, 129, 0.72);
+	color: white;
+	font-family: LatoWeb,Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-size: 25px;
+}
+
+img{
+	border-radius: 50%;
+	border: 3px solid hsla(0, 0%, 100%, .8);
+}
+
+._wrap{
+	width: 60%;
+	margin: 0 auto;
+}
+
+/*个人信息*/
+
+#personal_Inf{
+	display: flex;
+	display: -webkit-flex;/* Safari and Chrome */
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15%;
+	margin-bottom: 10%;
+}
+#personal_Inf img{
+	width: 15%;
+	transition: width 1s, transform 1s;
+	-webkit-transition: width 1s, transform 1s; /* Safari and Chrome */
+	-moz-transition: width 1s, transform 1s; /* Firefox 4 */
+	-o-transition: width 1s, transform 1s; /* Opera */
+}
+#personal_Inf img:hover{
+		transform: rotate(360deg);
+}
+#personal_Inf_a{
+	display: none;
+	margin-top: 5%;
+}
+
+/*更多信息*/
+@media screen and (min-device-width:600px){
+	#personal_Inf img{
+		width: 15%;
+	}
+	#personal_Inf img:hover{
+		width: 23%;
+	}
+	#more_Inf{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.more_Inf_c{
+		width: 25%;
+	}
+}
+@media screen and (max-device-width:600px){
+	#personal_Inf img{
+		width: 30%;
+	}
+	#personal_Inf img:hover{
+		width: 35%;
+	}
+	#more_Inf{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.more_Inf_c{
+		width: 50%;
+	}	
+}
+
+.more_Inf_c{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.more_Inf_c img{
+	width: 30%;
+	transition: width 1s, transform 1s;
+	-webkit-transition: width 1s, transform 1s; /* Safari and Chrome */
+	-moz-transition: width 1s, transform 1s; /* Firefox 4 */
+	-o-transition: width 1s, transform 1s; /* Opera */
+}
+#more_Inf img:hover{
+	width: 50%;
+	transform: rotate(360deg);
+}
+
+.repo_more{
+	display: none;
+	width: 100%;
+}
+.repo_more ul{
+	width: 100%;
+}
+.repo_more ul li{
+	display: block;
+	width: 100%;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	border: 1px solid hsla(0, 0%, 100%, .5);
+	border-radius: 10%;
+}
