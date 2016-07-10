@@ -55,6 +55,11 @@ img{
 }
 
 /*更多信息*/
+#more_Inf{
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+}
 @media screen and (min-device-width:600px){
 	#personal_Inf img{
 		width: 15%;
@@ -63,11 +68,8 @@ img{
 		width: 23%;
 	}
 	#more_Inf{
-		display: flex;
 		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 	}
 	.more_Inf_c{
 		width: 25%;
@@ -81,10 +83,7 @@ img{
 		width: 35%;
 	}
 	#more_Inf{
-		display: flex;
 		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
 		align-items: center;
 	}
 	.more_Inf_c{
