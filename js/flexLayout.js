@@ -8,12 +8,12 @@ $(document).ready(function(){
 	});
 
 	//更多信息
-	$(".repo_list_img").mouseover(function(){
-		$(this).css({"width":"50%","transform":"rotate(360deg)"});
-		$(this).next().slideDown();
+	$(".more_Inf_c").mouseenter(function(){
+		$(this).find('img').css({"width":"50%","transform":"rotate(360deg)"});
+		$(this).find('.repo_more').slideDown();
 	});
-	$(".repo_list_img").mouseout(function(){
-		$(this).css({"width":"30%","transform":"rotate(0deg)"});
-		$(this).next().slideUp();
+	$(".more_Inf_c").mouseleave(function(){
+		$(this).find('img').css({"width":"30%","transform":"rotate(0deg)"});
+		$(this).find('.repo_more').slideUp();
 	}); 
 })
