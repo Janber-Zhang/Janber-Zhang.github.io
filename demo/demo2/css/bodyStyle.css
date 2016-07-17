@@ -1,3 +1,24 @@
 body{
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.84);
+	padding-top: 50px;
+}
+
+.carousel{
+	height: 500px;
+	background-color: rgba(0, 0, 0, 0.84);
+}
+
+.carousel .item{
+	height: 500px;
+	background-color: rgba(0, 0, 0, 0.84);
+}
+
+.carousel img{
+	width: 100%;
+}
+
+.carousel-caption p{
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 1.8;
 }
