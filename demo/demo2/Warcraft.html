@@ -36,7 +36,7 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">History <span class="sr-only">(current)</span></a></li>
               <li><a href="#">Heros</a></li>
-              <li><a href="#">Story</a></li>
+              <li><a href="#Story_">Story</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Big Expansion <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -63,9 +63,9 @@
               </button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#myModal">About Us</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Action</a></li>
                   <li><a href="#">Another action</a></li>
@@ -78,7 +78,7 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-      <!-- Carousel Component-->
+      <!-- Carousel Component 资料片简介-->
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -145,6 +145,66 @@
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">下一页</span>
         </a>
+      </div>
+      <!-- 英雄介绍 -->
+      <div class="container heros" id="Story_">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="image/story_01.jpg" alt="永恒之井">
+              <div class="caption">
+                <h3>永恒之井</h3>
+                <p>艾萨拉被萨格拉斯诱惑，召唤恶魔的军队入侵艾泽拉斯，暗夜精灵的军队则在罗宁和伊利丹的带领下奋起反抗，并最终赢得了暂时的胜利。</p>
+                <p><a href="http://games.sina.com.cn/o/z/wow/2012-09-10/1541458995.shtml" target="_block" class="btn btn-primary" role="button">详细内容</a> </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="image/story_02.jpg" alt="恶魔之魂">
+              <div class="caption">
+                <h3>恶魔之魂</h3>
+                <p>暗夜精灵在年轻的玛法里奥及克拉苏斯的带领下与恶魔进行了一次殊死的抗争。而拯救这个世界的秘密武器，也会带来谁也无法遇见的后果。</p>
+                <p><a href="http://games.sina.com.cn/o/z/wow/2012-09-12/1957460332.shtml" target="_block" class="btn btn-primary" role="button">详细内容</a> </p>
+              </div>
+            </div>
+          </div> 
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="image/story_03.jpg" alt="天崩地裂">
+              <div class="caption">
+                <h3>天崩地裂</h3>
+                <p>克拉苏斯和年轻的玛法里奥必须不惜一切代价使艾泽拉斯免遭灭顶之灾，这些英雄希望聚集众人之力对抗燃烧军团的强大力量...</p>
+                <p><a href="http://games.sina.com.cn/o/z/wow/2012-09-13/1518460495.shtml" target="_block" class="btn btn-primary" role="button">详细内容</a> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="divider">
+      <!-- 版权部分 -->
+      <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+        <p>2016 Janber</p>
+      </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Abou Us</h4>
+          </div>
+          <div class="modal-body">
+            工作正在进行中。。。
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">OK</button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
