@@ -30,6 +30,20 @@ body{
 	margin-bottom: 50px;
 }
 
+.heros_{
+	width: 78%;
+	color: white;
+}
+
+.heros_story{
+	color: white;
+	width: 78%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.heros_ p{
+	line-height: 1.8;
+}
 footer{
 	padding-left: 10%;
 	padding-right: 10%;
