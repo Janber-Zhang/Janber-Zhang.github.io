@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DoubanBook Search</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bodyCSS.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <h1 class="text-center">豆瓣图书查询</h1>
+      <div class="search_bar center-block">
+        <input type="text" id="keyword_search"  placeholder="搜索作者、书名、ISBN">
+        <button id="toSearch" class="btn btn-info">搜索</button>
+      </div>
+      <!-- 查询信息显示单元 -->
+      <p class="text-right" id="bookTotal"></p>
+      <div class="cell">
+        <img src="" alt="">
+        <h2 class="bookTitle"></h2>
+        <p class="summary"></p>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.0.0.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bodyJs.js"></script>
+  </body>
+</html>

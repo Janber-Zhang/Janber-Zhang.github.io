@@ -1,0 +1,40 @@
+body, div, input, p, button, img, h1, h2, h3, h4, h5, h6, img{
+	padding: 0;
+	margin: 0;
+}
+
+.wrap{
+	width: 60%;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.search_bar{
+	width: 70%;
+	height: 40px;
+	margin-top: 20px;
+}
+#keyword_search{
+	height: 100%;
+	width: 80%;
+	float: left;
+}
+#toSearch{
+	height: 100%;
+	width: 20%;
+}
+#bookTotal{
+	margin-top: 30px;
+}
+
+
+/*Cell布局*/
+.cell{
+	margin-left: 130px;
+	position: relative;
+}
+.cell img{
+	position: absolute;
+	left: -130px;
+}
