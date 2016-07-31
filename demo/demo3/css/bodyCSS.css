@@ -1,4 +1,4 @@
-body, div, input, p, button, img, h1, h2, h3, h4, h5, h6, img{
+body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 	padding: 0;
 	margin: 0;
 }
@@ -15,6 +15,7 @@ body, div, input, p, button, img, h1, h2, h3, h4, h5, h6, img{
 	height: 40px;
 	margin-top: 20px;
 }
+
 #keyword_search{
 	height: 100%;
 	width: 80%;
@@ -27,20 +28,65 @@ body, div, input, p, button, img, h1, h2, h3, h4, h5, h6, img{
 #bookTotal{
 	margin-top: 30px;
 }
+@media screen and (max-device-width: 760px) {
+	#keyword_search{
+		height: 100%;
+		width: 100%;
+	}
+	#toSearch{
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#bookTotal{
+		margin-top: 40px;
+	}
+	.cell{
+		display: none;
+		margin-top: 20px;
+	}
+	.bookTitle{
+		font-size: 14px;
+	}
+}
 
-
-/*Cell布局*/
-.cell{
+@media screen and (min-device-width: 761px){
+	.cell{
 	min-height: 160px;
 	margin-left: 130px;
 	margin-bottom: 50px;
 	position: relative;
+	display: none;
+	}
+	.bookTitle{
+		font-size: 20px;
+	}
 }
+/*Cell布局*/
+
 .cell img{
 	position: absolute;
 	left: -130px;
 }
-
+.bookSummary{
+	height: 80px;
+	overflow: hidden;
+}
+.ratings{
+	width: 30%;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	height: 10px;
+	display: inline-block;
+}
+.raterNum{
+	display: inline-block;
+	line-height: 100%;
+	margin-bottom: 1px;
+	overflow: hidden;
+}
 /*分割线*/
 .division{
 	border-bottom: 1px solid gray;

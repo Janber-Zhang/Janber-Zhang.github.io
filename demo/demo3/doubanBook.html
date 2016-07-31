@@ -15,16 +15,22 @@
         <input type="text" id="keyword_search"  placeholder="搜索作者、书名、ISBN">
         <button id="toSearch" class="btn btn-info">搜索</button>
       </div>
-      <!-- 查询信息显示单元 -->
+      <!-- 书籍信息显示单元 -->
       <p class="text-right" id="bookTotal"></p>
       <div class="cell">
-        <a><img src="" alt=""></a>
-        <a><h2 class="bookTitle"></h2></a>
+        <a><img src="" alt=""></a>   
+        <a><p class="bookTitle"></p></a>
         <p class="bookAuthor small"></p>
-        <p class="bookSummary text-justify"></p>
+        <!-- 评价分数 -->
+        <div class="progress ratings">
+          <div class="progress-bar progress-bar-success progress-bar-striped active" id="jdt" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+          </div>
+        </div>
+        <p class="raterNum small"></p>
+        <!-- 内容简介 -->
+        <p class="bookSummary text-justify" rows="3" cols="100"></p>
       </div>
     </div>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.0.0.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
