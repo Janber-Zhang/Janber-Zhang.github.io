@@ -64,8 +64,8 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 		font-size: 20px;
 	}
 }
-/*Cell布局*/
 
+/*Cell布局*/
 .cell img{
 	position: absolute;
 	left: -130px;
@@ -92,4 +92,9 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 	border-bottom: 1px solid gray;
 	margin-left: -130px;
 	margin-bottom: 0;
+}
+
+/*分页*/
+#paging{
+	display: none;
 }
