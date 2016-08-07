@@ -104,3 +104,48 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 #paging{
 	display: none;
 }
+/*查询等待动画*/
+#waiting{
+	display: none;
+}
+#waiting img{
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	/*绑定动画*/
+	animation: searching 1.5s linear 0s infinite normal;
+	/* Firefox: */
+	-moz-animation: searching 1.5s linear 0s infinite normal;
+	/* Safari 和 Chrome: */
+	-webkit-animation: searching 1.5s linear 0s infinite normal;
+	/* Opera: */
+	-o-animation: searching 1.5s linear 0s infinite normal;
+}
+
+@keyframes searching
+{
+0%   {transform: rotate(0deg);}
+25%  {transform: rotate(90deg);}
+50%  {transform: rotate(180deg);}
+75%  {transform: rotate(270deg);}
+100% {transform: rotate(360deg);}
+}
+
+@-moz-keyframes searching /* Firefox */
+{
+from {rotate: 0deg;}
+to {rotate: 360deg;}
+}
+
+@-webkit-keyframes searching /* Safari 和 Chrome */
+{
+from {rotate: 0deg;}
+to {rotate: 360deg;}
+}
+
+@-o-keyframes searching /* Opera */
+{
+from {rotate: 0deg;}
+to {rotate: 360deg;}
+}

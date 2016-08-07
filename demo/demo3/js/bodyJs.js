@@ -1,8 +1,9 @@
 $(document).ready(function(){
-	var bookSort = new Array();
+	// 定义容器
 	var bookBox;
 	// 搜索函数
 	function searchBook(){
+		$('#waiting').show();
 		var keywords= $('#keyword_search').val(); 
 		// alert('是否查询：'+keywords);
 		$.ajax({
@@ -13,6 +14,7 @@ $(document).ready(function(){
 	             jsonp: "callback",
 	             jsonpCallback:"aha",
 	             success: function(json){
+	             	$('#waiting').hide();
 	             	$('#sortOrder').show();
 	             	$('.cell:first').show();
 	             	$('.cell:gt(0)').remove();
