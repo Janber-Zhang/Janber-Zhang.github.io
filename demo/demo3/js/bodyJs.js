@@ -3,33 +3,37 @@ $(document).ready(function(){
 	var bookBox;
 	// 搜索函数
 	function searchBook(){
-		$('#waiting').show();
-		var keywords= $('#keyword_search').val(); 
-		// alert('是否查询：'+keywords);
-		$.ajax({
-	             type: "get",
-	             async: true,
-	             url: 'https://api.douban.com/v2/book/search?q='+ keywords +'&fields=all&count=20',
-	             dataType: "jsonp",
-	             jsonp: "callback",
-	             jsonpCallback:"aha",
-	             success: function(json){
-	             	$('#waiting').hide();
-	             	$('#sortOrder').show();
-	             	$('.cell:first').show();
-	             	$('.cell:gt(0)').remove();
-	             	// alert('查询成功！！！相关书籍有:' + json.total + '本');
-	                $('#bookTotal').text('相关书籍有:' + json.total + '本');
-	                // 按评论数排序
-           			bookBox = json.books;      		
-	                // 显示书本信息
-	                displayBook();
-	                $('.cell:first').hide();
-	             },
-	             error: function(){
-	                alert('查询失败');
-	             }
-	    });
+		var keywords= $('#keyword_search').val(); 	
+		if (keywords) {	
+			$('#waiting').show();	
+			// alert('是否查询：'+keywords);
+			$.ajax({
+		             type: "get",
+		             async: true,
+		             url: 'https://api.douban.com/v2/book/search?q='+ keywords +'&fields=all&count=20',
+		             dataType: "jsonp",
+		             jsonp: "callback",
+		             jsonpCallback:"aha",
+		             success: function(json){
+		             	$('#waiting').hide();
+		             	$('#sortOrder').show();
+		             	$('.cell:first').show();
+		             	$('.cell:gt(0)').remove();
+		             	// alert('查询成功！！！相关书籍有:' + json.total + '本');
+		                $('#bookTotal').text('相关书籍有:' + json.total + '本');
+		                // 按评论数排序
+	           			bookBox = json.books;      		
+		                // 显示书本信息
+		                displayBook();
+		                $('.cell:first').hide();
+		             },
+		             error: function(){
+		                alert('查询失败');
+		             }
+		    });
+		}else{
+			alert('请输入关键字查询！！！')
+		}
 	};
 	// 默认获得焦点
 	$('#keyword_search').focus();

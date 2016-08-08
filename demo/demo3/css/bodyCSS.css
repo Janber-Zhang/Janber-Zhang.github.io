@@ -34,11 +34,12 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 		width: 100%;
 	}
 	#toSearch{
-		display: inline-block;
+		display: block;
 		height: 100%;
 		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+	}
+	#waiting img{
+		margin-top: 40px;
 	}
 	#bookTotal{
 		margin-top: 40px;
@@ -62,6 +63,9 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 	}
 	.bookTitle{
 		font-size: 20px;
+	}
+	#waiting img{
+		margin-top: 20px;
 	}
 }
 
@@ -104,13 +108,16 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 #paging{
 	display: none;
 }
+
+
+
 /*查询等待动画*/
 #waiting{
 	display: none;
 }
 #waiting img{
 	display: block;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	margin-left: auto;
 	margin-right: auto;
 	/*绑定动画*/
