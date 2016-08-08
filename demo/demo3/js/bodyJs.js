@@ -10,7 +10,7 @@ $(document).ready(function(){
 			$.ajax({
 		             type: "get",
 		             async: true,
-		             url: 'https://api.douban.com/v2/book/search?q='+ keywords +'&fields=all&count=20',
+		             url: 'https://api.douban.com/v2/book/search?q='+ keywords +'&fields=all&count=40',
 		             dataType: "jsonp",
 		             jsonp: "callback",
 		             jsonpCallback:"aha",
@@ -24,8 +24,9 @@ $(document).ready(function(){
 		                // 按评论数排序
 	           			bookBox = json.books;      		
 		                // 显示书本信息
-		                displayBook();
+		                displayBook(bookBox);
 		                $('.cell:first').hide();
+		                $('#paging').show();
 		             },
 		             error: function(){
 		                alert('查询失败');
@@ -63,7 +64,7 @@ $(document).ready(function(){
  			}
  		}
  		// 显示书本信息
-        displayBook();
+        displayBook(bookBox);
         $('.cell:first').hide();
 	});
 
@@ -82,7 +83,7 @@ $(document).ready(function(){
  			}
  		}
  		// 显示书本信息
-        displayBook();
+        displayBook(bookBox);
         $('.cell:first').hide();
 	});
 	// 按价格排序
@@ -99,34 +100,45 @@ $(document).ready(function(){
  				}
  			}
  		}
- 		displayBook();
+ 		displayBook(bookBox);
         $('.cell:first').hide();
 	});
 	// 显示书籍信息
-	function displayBook(){
-        for (var i = 0 ; i <= bookBox.length-1; i++) {
+	function displayBook(book_case){
+        for (var i = 0 ; i <= 9; i++) {
         	$('.cell:first').clone().appendTo('.bookCell');
         	// 获得书籍封面
         	$('.cell:last').find('img').attr({
-        	src: bookBox[i].image,
-        	alt: bookBox[i].title
+        	src: book_case[i].image,
+        	alt: book_case[i].title
             });
             // 获得书籍详细信息
-            $('.cell:last').find('.bookTitle').html(bookBox[i].title);
-            $('.cell:last').find('.bookAuthor').html('作者：' + bookBox[i].author +' / ' +bookBox[i].publisher+ ' / ' + bookBox[i].pubdate + ' / ' + bookBox[i].price);
-            if (bookBox[i].summary) {
-            	$('.cell:last').find('.bookSummary').html(bookBox[i].summary);
+            $('.cell:last').find('.bookTitle').html(book_case[i].title);
+            $('.cell:last').find('.bookAuthor').html('作者：' + book_case[i].author +' / ' +book_case[i].publisher+ ' / ' + book_case[i].pubdate + ' / ' + book_case[i].price);
+            if (book_case[i].summary) {
+            	$('.cell:last').find('.bookSummary').html(book_case[i].summary);
             }else{
             	$('.cell:last').find('.bookSummary').html('暂无简介');
             }
             $('.cell:last').find('a').attr({
             	target: 'block',
-            	href: bookBox[i].url
+            	href: book_case[i].url
             });
-            var jdt_width = bookBox[i].rating.average * 10;
+            var jdt_width = book_case[i].rating.average * 10;
             $('.cell:last').find('#jdt').css('width', jdt_width+'%');
-            $('.cell:last').find('.raterNum').html('(' + bookBox[i].rating.numRaters + '人评价）')
+            $('.cell:last').find('.raterNum').html('(' + book_case[i].rating.numRaters + '人评价）')
         }
 	}
+
+	// 分页显示
+	$('.page_').click(function() {
+		var PageNum_ = $(this).text();
+		alert('显示第' + PageNum_ + '页信息！');
+		var book_box_ = bookBox.slice( (PageNum_ - 1) * 10, PageNum_ * 10);
+		$('.cell:first').show();
+     	$('.cell:gt(0)').remove();
+     	displayBook(book_box_);
+        $('.cell:first').hide();
+	});
 
 });

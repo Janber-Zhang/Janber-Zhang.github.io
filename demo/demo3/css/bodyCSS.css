@@ -106,7 +106,13 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 }
 /*分页*/
 #paging{
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
 	display: none;
+}
+.paging_ul{
+
 }
 
 
