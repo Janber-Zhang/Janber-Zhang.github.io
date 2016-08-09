@@ -1,15 +1,23 @@
-body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
+html, body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 	padding: 0;
 	margin: 0;
 }
 
+html, body{
+	height: 100%;
+}
 .wrap{
+	min-height: 100%;
 	width: 60%;
-	margin-top: 40px;
+	padding-top: 40px;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
+	padding-bottom: 20px;
 }
+.title_{
 
+}
 .search_bar{
 	width: 70%;
 	height: 40px;
@@ -106,16 +114,22 @@ body, div, input, p, button, a, img, h1, h2, h3, h4, h5, h6, img{
 }
 /*分页*/
 #paging{
-	width: 200px;
+	width: 300px;
 	margin-left: auto;
 	margin-right: auto;
 	display: none;
 }
-.paging_ul{
 
+/*页脚*/
+
+.Footer{
+	width: 100%;
+	position: absolute;
+	bottom: 20px;
 }
-
-
+.toTop{
+	float: right;
+}
 
 /*查询等待动画*/
 #waiting{

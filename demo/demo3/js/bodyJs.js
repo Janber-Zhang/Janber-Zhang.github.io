@@ -103,6 +103,18 @@ $(document).ready(function(){
  		displayBook(bookBox);
         $('.cell:first').hide();
 	});
+
+	// 分页显示
+	$('.page_').click(function() {
+		var PageNum_ = $(this).text();
+		// alert('显示第' + PageNum_ + '页信息！');
+		var book_box_ = bookBox.slice( (PageNum_ - 1) * 10, PageNum_ * 10);
+		$('.cell:first').show();
+     	$('.cell:gt(0)').remove();
+     	displayBook(book_box_);
+        $('.cell:first').hide();
+	});
+	
 	// 显示书籍信息
 	function displayBook(book_case){
         for (var i = 0 ; i <= 9; i++) {
@@ -130,15 +142,6 @@ $(document).ready(function(){
         }
 	}
 
-	// 分页显示
-	$('.page_').click(function() {
-		var PageNum_ = $(this).text();
-		alert('显示第' + PageNum_ + '页信息！');
-		var book_box_ = bookBox.slice( (PageNum_ - 1) * 10, PageNum_ * 10);
-		$('.cell:first').show();
-     	$('.cell:gt(0)').remove();
-     	displayBook(book_box_);
-        $('.cell:first').hide();
-	});
+	
 
 });

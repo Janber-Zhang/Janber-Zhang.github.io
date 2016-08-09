@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="wrap">
-      <h1 class="text-center">豆瓣图书查询</h1>
+      <h1 class="text-center title_" ">豆瓣图书查询</h1>
       <div class="search_bar center-block">
         <input type="text" id="keyword_search"  placeholder="搜索作者、书名、ISBN">
         <button id="toSearch" class="btn btn-info">搜索</button>
@@ -47,14 +47,14 @@
       </div>
       <!-- 分页模块 -->
       <nav id="paging">
-        <ul class="pagination" class="paging_ul">
+        <ul class="pagination pagination-lg">
           <li>
             <a href="#" aria-label="Previous" class="Pre_">
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
           <li><a href="#" class="page_">1</a></li>
-          <li><a href="#" class="pege_">2</a></li>
+          <li><a href="#" class="page_">2</a></li>
           <li><a href="#" class="page_">3</a></li>
           <li><a href="#" class="page_">4</a></li>
           <li>
@@ -64,6 +64,11 @@
           </li>
         </ul>
       </nav>
+      <!-- 页脚 -->
+      <footer class="Footer">
+        <p class="toTop"><a href="#top">回到顶部</a></p>
+        <p>©2016 Janber</p>
+      </footer>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-3.0.0.js"></script>
