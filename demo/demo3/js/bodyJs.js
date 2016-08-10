@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// 定义容器
-	var bookBox;
+	var bookBox = null;
 	// 搜索函数
 	function searchBook(){
 		var keywords= $('#keyword_search').val(); 	
@@ -15,18 +15,22 @@ $(document).ready(function(){
 		             jsonp: "callback",
 		             jsonpCallback:"aha",
 		             success: function(json){
-		             	$('#waiting').hide();
-		             	$('#sortOrder').show();
-		             	$('.cell:first').show();
-		             	$('.cell:gt(0)').remove();
-		             	// alert('查询成功！！！相关书籍有:' + json.total + '本');
-		                $('#bookTotal').text('相关书籍有:' + json.total + '本');
-		                // 按评论数排序
-	           			bookBox = json.books;      		
-		                // 显示书本信息
-		                displayBook(bookBox);
-		                $('.cell:first').hide();
-		                $('#paging').show();
+		             	$('#waiting').hide();		        
+		             	bookBox = json.books; 
+		             	// 
+		             	if (bookBox.length) {
+		             		$('#sortOrder').show();
+		             		$('.cell:first').show();
+		             		$('.cell:gt(0)').remove();
+		             		// alert('查询成功！！！相关书籍有:' + json.total + '本');
+		                	$('#bookTotal').text('相关书籍有:' + json.total + '本');   		
+		                	// 显示书本信息
+		               	 	displayBook(bookBox);
+		                	$('.cell:first').hide();
+		                	$('#paging').show();
+		             	}else{
+		             		alert('未查询到相关书籍！');
+		             	}		             	
 		             },
 		             error: function(){
 		                alert('查询失败');
