@@ -1,3 +1,3 @@
-This a Page About Warcraft
+This is a Page About Warcraft
 
 Use Bootstrap 
