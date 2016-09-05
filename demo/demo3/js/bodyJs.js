@@ -142,7 +142,7 @@ $(document).ready(function(){
             });
             var jdt_width = book_case[i].rating.average * 10;
             $('.cell:last').find('#jdt').css('width', jdt_width+'%');
-            $('.cell:last').find('.raterNum').html('(' + book_case[i].rating.numRaters + '人评价）')
+            $('.cell:last').find('.raterNum').html('(' +book_case[i].rating.average +'分 / ' + book_case[i].rating.numRaters + '人评价）')
         }
 	}
 
