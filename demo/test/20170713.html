@@ -21,9 +21,6 @@
         margin-bottom: 10px;
         margin-top: 30px;
     }
-    a{
-        display: block;
-    }
 
 </style>
 <body>
@@ -46,16 +43,33 @@
     <div style="margin-top: 10px">
         <h1>127.0.0.1为什么很快</h1>
         <div>
-            <a target="_blank" href="http://blog.csdn.net/fasure_smile/article/details/52387060">localhost，127.0.0.1 和 本机IP 三者的区别</a>
+            <a target="_blank" href="http://blog.csdn.net/fasure_smile/article/details/52387060">localhost，127.0.0.1 和 本机IP 三者的区别</a><br/>
             <a target="_blank" href="http://blog.sina.com.cn/s/blog_6714fba701018pip.html">关于etc/hosts文件</a>
         </div> 
     </div>
     <div style="margin-top: 10px">
         <h1>防抖动(Debouncing)和节流阀(Throttling)</h1>
         <div>
-            <a target="_blank" href="http://www.css88.com/doc/underscore/#">underscore</a>
-            <a target="_blank" href="http://lodashjs.com/docs/">lodash</a>
+            <a target="_blank" href="http://www.css88.com/archives/6589#more-6589">概念</a> <br/>
+            <a target="_blank" href="">实例解析防抖动(http://www.css88.com/archives/7010Debouncing)和节流阀(Throttling)</a><br/>
+            <a target="_blank" href="http://www.css88.com/doc/underscore/#">underscore</a><br/>
+            <a target="_blank" href="http://lodashjs.com/docs/">lodash</a><br/>
             <span>e.g.</span><input type="text" id="debounce_">
+            <br/>
+            <code>
+                var delta = 1000; <br/>
+                var timeoutID = null;<br/>
+                function log() {<br/>
+                console.log('foo');<br/>
+                }<br/>
+                function debouncedLog() {<br/>
+                clearTimeout(timeoutID);<br/>
+                timeoutID = setTimeout(function() {<br/>
+                log();<br/>
+                }, delta);<br/>
+                };<br/>
+                window.onkeydown = debouncedLog;
+            </code>
         </div> 
     </div>
 
