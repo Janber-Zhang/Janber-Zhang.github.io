@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>share</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript" src="transliteration.js"></script>
+</head>
+<style>
+    [data-unit]:after{
+      content: attr(data-unit);
+      color: #3b98e0;
+    }
+    ::selection {
+        background: #FE6E66;
+        color: #FFF;
+    }
+    h1{
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+    a{
+        display: block;
+    }
+
+</style>
+<body>
+    <div style="margin-top: 10px">
+    	<h1>音译模块</h1>
+    	<a href="https://github.com/andyhu/transliteration" target="_blank">github</a>
+        <div>
+            <input id="source" type="text">
+            <p id="result"></p>
+        </div> 
+    </div>
+
+    <div style="margin-top: 10px">
+        <h1>css的一些小东西(attr,selection)</h1>
+        <div>
+            <span data-unit="元">剩余话费40</span>
+        </div> 
+    </div>
+
+    <div style="margin-top: 10px">
+        <h1>127.0.0.1为什么很快</h1>
+        <div>
+            <a target="_blank" href="http://blog.csdn.net/fasure_smile/article/details/52387060">localhost，127.0.0.1 和 本机IP 三者的区别</a>
+            <a target="_blank" href="http://blog.sina.com.cn/s/blog_6714fba701018pip.html">关于etc/hosts文件</a>
+        </div> 
+    </div>
+    <div style="margin-top: 10px">
+        <h1>防抖动(Debouncing)和节流阀(Throttling)</h1>
+        <div>
+            <a target="_blank" href="http://www.css88.com/doc/underscore/#">underscore</a>
+            <a target="_blank" href="http://lodashjs.com/docs/">lodash</a>
+            <span>e.g.</span><input type="text" id="debounce_">
+        </div> 
+    </div>
+
+</body>
+</html>

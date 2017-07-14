@@ -7,4 +7,15 @@ $(document).ready(function(){
 		}
 		$('#eventNone').css('left','-69px')
 	});
+	$('#source').keyup(function(event) {
+		var val = $(this).val();
+		var result = transl(val);
+		$('#result').text(result);
+	});
+	$('#debounce_').keyup(function() {
+		console.log('onkeyup');
+	})
+	$('#debounce_').keydown(function() {
+		console.log('onkeydown');
+	})
 });
